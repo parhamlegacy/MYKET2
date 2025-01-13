@@ -23,12 +23,12 @@ body{
     font-family:monospace;
 }
 .English{
-    margin-left: 3.2%;
-    margin-top: 28px;
-    font-size: 18px;
+    margin-left: 6%;
+    margin-top: 26px;
+    font-size: 20px;
 }
 .Search{
-    margin-left: 1.2%;
+    margin-left: 1%;
     margin-top:28px ;
     font-size: 24px;
 }
@@ -42,10 +42,10 @@ body{
     white-space: nowrap;
 }
 .Games, .Apps, .MoviesAndSeries{
-    margin-left: 2.9%;
+    margin-left: 2%;
 }
 .Developers{
-    margin-left: 25px;
+    margin-left: 19px;
 }
 .English:hover, .Search:hover, .Developers:hover, .MoviesAndSeries:hover, .Apps:hover, .Games:hover {
     color: rgb(255, 0, 0);
@@ -90,22 +90,25 @@ body{
     }
 }
 .main-box-1{
-    height: 112vh;
+    position: relative;
     width: 100vw;
+    height: 750px;
+    min-height: 600px;
     position: relative;
     display: flex;
     justify-content: space-between;
 }
 .animation-box{
-    background-color: rgb(53, 46, 46);
     position: absolute;
     display: flex;
-    width: 500px ;
-    height: 112vh;
-    margin-left: 2%;
+    min-height: 600;
+    width: 480px ;
+    height: 750px;
+    margin-left: 6%;
     overflow: hidden;
 }
 .animation-box div{
+    scale: 0.99;
     position: absolute;
     width: 25% ;
     height: 100%;
@@ -124,10 +127,6 @@ body{
 }
 .waterfall-line-4{
     margin-left: 75%;
-}
-div img {
-    display: flex;
-    flex-wrap: wrap;
 }
 .waterfall-img-1 {
     animation: move-image-1 36s infinite linear reverse, fade-img 4s linear;
@@ -154,7 +153,7 @@ div img {
         transform: translateY(-400%); 
     } 
     100% { 
-        transform: translateY(0%); 
+        transform: translateY(-100%); 
     }
 }
 @keyframes move-image-2 {
@@ -162,7 +161,7 @@ div img {
         transform: translateY(-400%); 
     } 
     100% { 
-        transform: translateY(0%); 
+        transform: translateY(-100%); 
     }
 }
 @keyframes move-image-3 {
@@ -170,7 +169,7 @@ div img {
         transform: translateY(-400%); 
     } 
     100% { 
-        transform: translateY(0%); 
+        transform: translateY(-100%); 
     }
 }
 @keyframes move-image-4 {
@@ -178,37 +177,26 @@ div img {
         transform: translateY(-400%); 
     } 
     100% { 
-        transform: translateY(0%); 
+        transform: translateY(-100%); 
     }
+}
+.logo-box div {
+    scale: 1.2;
 }
 .logo-box{
     position: absolute;
-    height: 70vh;
-    margin-top: 140px;
-    width: 60vw;
-    border-radius: 30px;
+    height: max-content;
+    margin-top: 25vh;
+    width: max-content;
     right: 3.5vw;
     z-index: 1;
     display: flex;
     justify-content: center;
-    justify-items: center;
+    align-items: end;
     flex-direction: column;
-    gap: 8vh;
-    animation: bg-logo-animatin 2.5s none;
-}
-@keyframes bg-logo-animatin {
-    0% { 
-        width: 10vw;
-    } 
-    100% { 
-        width: 60vw;
-    }
-}
-.logo{
-    height: 102.6px ;
-    width: 325.755px ;
-    margin-left: 40%;
-    animation: logo-fade-animation 3s  normal;
+    margin-right: 2rem;
+    gap: 80px;
+    animation: logo-fade-animation 5s normal,logo-move-animation 3s normal;
 }
 @keyframes logo-fade-animation {
     0% { 
@@ -218,47 +206,33 @@ div img {
         opacity: 1; 
     }
 }
+@keyframes logo-move-animation {
+    0% { 
+        transform: translateX(100%); 
+    } 
+    100% { 
+        transform: translateX(0%); 
+    }
+}
+
+.logo{
+    height: 102.6px ;
+    width: 325.755px ;
+}
 .logo-text-1{
-    margin-left: 39% ;
+    display: block;
+    text-align: end;
     font-size: 30px;
     color: white;
     text-shadow: 1px 1px 1px black;
     font-weight: 530px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     white-space: nowrap;
-    animation: text-fade-animation 5s  normal;
-}
-@keyframes text-fade-animation {
-    0% { 
-        opacity: 0; 
-    } 
-    100% { 
-        opacity: 1; 
-    }
-}
-.logo-text-2{
-    margin-left: 39%;
-    font-size: 26px;
-    color: white;
-    font-weight: 530;
-    text-shadow: 1px 1px 1px black;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    white-space: nowrap;
-    animation: text2-fade-animation 7s  normal;
-}
-@keyframes text2-fade-animation {
-    0% { 
-        opacity: 0; 
-    } 
-    100% { 
-        opacity: 1; 
-    }
 }
 .myket-download-link{
-    margin-left: 45%;
     background-image:linear-gradient(135deg,#ff00ff,#8a2be2);
     width: 250px;
-    height: 75px ;
+    height: 55px ;
     border-radius: 11px;
     display: flex;
     justify-content: center;
@@ -273,24 +247,18 @@ div img {
     text-decoration: none;
     border-radius: 11px;
     display: block;
-    animation: download-link-fade-animation 6s  normal;
 }
-@keyframes download-link-fade-animation {
-    0% { 
-        opacity: 0; 
-    } 
-    100% { 
-        opacity: 1; 
-    }
-}
+
 .main-box-2{
-    margin-top: 112vh;
+    z-index: 30;
+    margin-top: 748px;
     height: 700px; 
     width: 100vw;
     background: linear-gradient(135deg, #000000, #434343);
 }
 .information-box-number{
     height: 250px;
+    width: 100vw;
     display: flex;
     justify-content: space-evenly;
     flex-direction: row-reverse;
@@ -314,20 +282,20 @@ div img {
 @keyframes num-rgb {
     0% {
         color: rgba(0, 0, 255, 0.8);
-        }
-        25% {
-        color: rgba(0, 191, 255, 0.8);
-        }
-        50% {
-        color: rgba(70, 130, 180, 0.8);
-        }
-        75% {
-        color: rgba(30, 144, 255, 0.8);
-        }
-        100% {
-        color: rgba(0, 0, 255, 0.8);
-        }
     }
+    25% {
+        color: rgba(0, 191, 255, 0.8);
+    }
+    50% {
+        color: rgba(70, 130, 180, 0.8);
+    }
+    75% {
+        color: rgba(30, 144, 255, 0.8);
+    }
+    100% {
+        color: rgba(0, 0, 255, 0.8);
+    }
+}
 .text-vlalue-1,.text-vlalue-2,.text-vlalue-3,.text-vlalue-4,.text-vlalue-5,.text-vlalue-6{
     text-align: center; 
     font-size: 21px;
@@ -344,7 +312,6 @@ div img {
     gap: 2%;
     row-gap: 20px;
     flex-wrap: wrap;
-
     flex-direction: row-reverse;
 }
 .information-box-image div{
@@ -356,9 +323,20 @@ div img {
     width: 450px ;
     border-radius: 20px ;
     direction: rtl;
+    transition: transform 9s ease;
+}
+.information-box-image div:hover img{
+    transform: scale(1.2);
+    filter: brightness(1.5);
+}
+.information-box-image div:hover span{
+    transform: scale(1.1);
+    filter: brightness(1.2);
 }
 .information-box-image img{
     scale: 0.65;
+    transition: transform 1s ease;
+    
 }
 .information-box-image span{
     display: block;
@@ -368,6 +346,7 @@ div img {
     color: white;
     font-weight: lighter;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: transform 1s ease;
 }
 .text-img-2{
     padding-left: 70px;
