@@ -91,7 +91,7 @@ body{
 }
 .main-box-1{
     height: 112vh;
-    width: 100%;
+    width: 100vw;
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -286,7 +286,7 @@ div img {
 .main-box-2{
     margin-top: 112vh;
     height: 700px; 
-    width: 100%;
+    width: 100vw;
     background: linear-gradient(135deg, #000000, #434343);
 }
 .information-box-number{
@@ -336,7 +336,7 @@ div img {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .information-box-image{
-    width: 100%;
+    width: 100vw;
     height: 450px;
     padding: 2%;
     display: flex;
